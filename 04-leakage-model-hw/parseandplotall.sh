@@ -29,22 +29,22 @@ run_pair() {
   python "${plotter}" "${mode}" "${infile}" "${outprefix}"
 }
 
-# Figures 5a and 7a (frequency)
+echo "Figures 5a and 7a (frequency)"
 run_pair --freq   "data/out-${tag}"        "./plot-hw.py"        "hw-freq"
-# Figures 5b and 7b (power)
+echo  "Figures 5b and 7b (power)"
 run_pair --energy "data/out-${tag}"        "./plot-hw.py"        "hw-power"
 
-# Figure 6a (frequency, no-countermeasure)
+echo "Figure 6a (frequency, no-countermeasure)"
 run_pair --freq   "data/out-nc-${tag}"     "./plot-hw-nc.py"     "hw-nc-freq"
-# Figure 6b (power, no-countermeasure)
+echo "Figure 6b (power, no-countermeasure)"
 run_pair --energy "data/out-nc-${tag}"     "./plot-hw-nc.py"     "hw-nc-power"
 
-# Figures 15a and 16a (frequency, shift)
+echo "Figures 15a and 16a (frequency, shift)"
 run_pair --freq   "data/out-shift-${tag}"  "./plot-hw-shift.py"  "hw-shift-freq"
-# Figures 15b and 16b (power, shift)
+echo "Figures 15b and 16b (power, shift)"
 run_pair --energy "data/out-shift-${tag}"  "./plot-hw-shift.py"  "hw-shift-power"
 
-# Figure 17a (frequency, rest)
+echo "Figure 17a (frequency, rest)"
 run_pair --freq   "data/out-rest-${tag}"   "./plot-hw-rest.py"   "hw-rest-freq"
 # Figure 17b (power, rest)
 run_pair --energy "data/out-rest-${tag}"   "./plot-hw-rest.py"   "hw-rest-power"
