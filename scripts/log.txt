@@ -1,0 +1,2 @@
+This script will take about 55 hours. Reduce 'outer' if you want a shorter run.
+/scratch-local/skuppin/hertzbleed/scripts
